@@ -15,10 +15,11 @@
     <main>
         <section class="style-one">
             <div class="wordart">
-                <h1 class="preview" data-content="CodePen">vc é top d+</h1>
+                <h1 class="preview" data-content="vc é top d+">vc é top d+</h1>
             </div>
         </section>
         <section style="visibility: hidden; height: 0;">
+        <!-- <section> -->
             <div class="container">
                 <form>
                     <select name="wordart-style" id="wordart-style" defau class="form-item">
@@ -32,7 +33,7 @@
                         <option value="eight" id="eight">WordArt Style 8</option>
                         <option value="nine" id="nine">WordArt Style 9</option>
                         <option value="ten" id="ten">WordArt Style 10</option>
-                        <option value="eleven"  id="eleven">WordArt Style 11</option>
+                        <option value="eleven" id="eleven">WordArt Style 11</option>
                         <option value="twelve" id="twelve">WordArt Style 12</option>
                         <option value="thirteen" id="thirteen">WordArt Style 13</option>
                         <option value="fourteen" id="fourteen">WordArt Style 14</option>
@@ -73,13 +74,52 @@
             });
         }
 
-        // text.addEventListener('keyup', changePreview);
+        text.addEventListener('keyup', changePreview);
 
-        previews.forEach(preview => {
+        const values = [
+            "one",
+            "two",
+            "three",
+            "four",
+            "five",
+            "six",
+            "seven",
+            "eight",
+            "nine",
+            "ten",
+            "eleven",
+            "twelve",
+            "thirteen",
+            "fourteen",
+            "fifteen",
+            "sixteen",
+            "seventeen",
+            "eighteen",
+            "nineteen",
+            "twenty",
+            "twentyone",
+            "twentytwo",
+        ]
+
+
+        let counter = 0;
+        setInterval(function () {
+            previews.forEach(preview => {
+                
                 styleChange.removeAttribute('class');
-                styleChange.classList.add('style-' + 'eleven');
+                
+                if(counter <= 22) {
+                    counter++;
+                } else {
+                    counter = 0;
+                }
+                styleChange.classList.add('style-' + values[counter]);
+
             });
-        
+
+        }, 1000);
+
+
     </script>
 </body>
 
