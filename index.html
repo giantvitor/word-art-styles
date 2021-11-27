@@ -13,48 +13,73 @@
 
 <body>
     <main>
-        <section class="style-one">
-            <div class="wordart">
-                <h1 class="preview" data-content="vc é top d+">vc é top d+</h1>
+        <div id="word-art-container">
+
+            <section id="section-to-change" class="style-one">
+                <div class="wordart">
+                    <h1 class="preview" data-content="vc é top d+">vc é top d+</h1>
+                </div>
+            </section>
+            <section style="visibility: hidden; height: 0;">
+                <!-- <section> -->
+                <div class="container">
+                    <form>
+                        <select name="wordart-style" id="wordart-style" defau class="form-item">
+                            <option value="one" id="one">WordArt Style 1</option>
+                            <option value="two" id="two">WordArt Style 2</option>
+                            <option value="three" id="three">WordArt Style 3</option>
+                            <option value="four" id="four">WordArt Style 4</option>
+                            <option value="five" id="five">WordArt Style 5</option>
+                            <option value="six" id="six">WordArt Style 6</option>
+                            <option value="seven" id="seven">WordArt Style 7</option>
+                            <option value="eight" id="eight">WordArt Style 8</option>
+                            <option value="nine" id="nine">WordArt Style 9</option>
+                            <option value="ten" id="ten">WordArt Style 10</option>
+                            <option value="eleven" id="eleven">WordArt Style 11</option>
+                            <option value="twelve" id="twelve">WordArt Style 12</option>
+                            <option value="thirteen" id="thirteen">WordArt Style 13</option>
+                            <option value="fourteen" id="fourteen">WordArt Style 14</option>
+                            <option value="fifteen" id="fifteen">WordArt Style 15</option>
+                            <option value="sixteen" id="sixteen">WordArt Style 16</option>
+                            <option value="seventeen" id="seventeen">WordArt Style 17</option>
+                            <option value="eighteen" id="eighteen">WordArt Style 18</option>
+                            <option value="nineteen" id="nineteen">WordArt Style 19</option>
+                            <option value="twenty" id="twenty">WordArt Style 20</option>
+                            <option value="twentyone" id="twentyone">WordArt Style 21</option>
+                            <option value="twentytwo" id="twentytwo">WordArt Style 22</option>
+                        </select>
+                        <textarea name="text" placeholder="Enter your text here" id="text" cols="30" rows="1"
+                            maxlength="30" class="form-item"></textarea>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+
+        <p class="cool-text">
+            tá a fim de ver uma parada maneira?
+        </p>
+
+        <div class="button-container">
+
+
+            <a href="./photos.html" style="text-decoration: none;">
+                <div class="button">
+                    SIM
+                </div>
+            </a>
+
+
+            <div class="button">
+                NÃO
             </div>
-        </section>
-        <section style="visibility: hidden; height: 0;">
-        <!-- <section> -->
-            <div class="container">
-                <form>
-                    <select name="wordart-style" id="wordart-style" defau class="form-item">
-                        <option value="one" id="one">WordArt Style 1</option>
-                        <option value="two" id="two">WordArt Style 2</option>
-                        <option value="three" id="three">WordArt Style 3</option>
-                        <option value="four" id="four">WordArt Style 4</option>
-                        <option value="five" id="five">WordArt Style 5</option>
-                        <option value="six" id="six">WordArt Style 6</option>
-                        <option value="seven" id="seven">WordArt Style 7</option>
-                        <option value="eight" id="eight">WordArt Style 8</option>
-                        <option value="nine" id="nine">WordArt Style 9</option>
-                        <option value="ten" id="ten">WordArt Style 10</option>
-                        <option value="eleven" id="eleven">WordArt Style 11</option>
-                        <option value="twelve" id="twelve">WordArt Style 12</option>
-                        <option value="thirteen" id="thirteen">WordArt Style 13</option>
-                        <option value="fourteen" id="fourteen">WordArt Style 14</option>
-                        <option value="fifteen" id="fifteen">WordArt Style 15</option>
-                        <option value="sixteen" id="sixteen">WordArt Style 16</option>
-                        <option value="seventeen" id="seventeen">WordArt Style 17</option>
-                        <option value="eighteen" id="eighteen">WordArt Style 18</option>
-                        <option value="nineteen" id="nineteen">WordArt Style 19</option>
-                        <option value="twenty" id="twenty">WordArt Style 20</option>
-                        <option value="twentyone" id="twentyone">WordArt Style 21</option>
-                        <option value="twentytwo" id="twentytwo">WordArt Style 22</option>
-                    </select>
-                    <textarea name="text" placeholder="Enter your text here" id="text" cols="30" rows="1" maxlength="30"
-                        class="form-item"></textarea>
-                </form>
-            </div>
-        </section>
+        </div>
+
     </main>
+
     <script>
         const styleSelect = document.querySelector('#wordart-style');
-        const styleChange = document.querySelector('section');
+        const styleChange = document.querySelector('#section-to-change');
         const text = document.querySelector('#text');
         const previews = document.querySelectorAll('.preview');
 
@@ -105,10 +130,10 @@
         let counter = 0;
         setInterval(function () {
             previews.forEach(preview => {
-                
+
                 styleChange.removeAttribute('class');
-                
-                if(counter <= 22) {
+
+                if (counter <= 22) {
                     counter++;
                 } else {
                     counter = 0;

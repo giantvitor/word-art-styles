@@ -16,6 +16,20 @@ body {
     min-height: 100vh;
     overflow: hidden;
 }
+
+main {
+    width: 100%;
+}
+
+#word-art-container {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.cool-text {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+}
 .container {
     margin: auto;
     padding: 0 1rem;
@@ -23,8 +37,10 @@ body {
     width: 100%;
 }
 .wordart {
-    position: relative;
     display: inline-block;
+
+
+
 }
 .wordart .preview {
     margin: 0 0 2rem;
@@ -38,6 +54,7 @@ h1 {
 section {
     position: relative;
 }
+
 section.style-one .wordart {
     transform: scale(1.05, 1.25);
 }
@@ -403,12 +420,356 @@ textarea:focus, select:focus {
     border-color: #396fb9;
     box-shadow: 0 0 0 2px #b3cdf4;
 }
-select#wordart-style {
-    margin-bottom: 1rem;
-    background: #fff url('data:image/svg+xml;
-   utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%23727272" viewBox="0 0 20 20"><path d="M5 8l6 6 6-6z"/></svg>') right 0.5rem center no-repeat;
-    padding: 0.75rem 1.5rem 0.75rem 0.75rem;
-}
+
 textarea {
     height: 4rem;
 }
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -khtml-appearance: none;
+    box-sizing: initial;
+    border: none;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 5rem auto;
+    position: relative;
+    width: 46px;
+    height: 19px;
+    padding: 31px 17px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* TEXT */
+    text-align: center;
+    font: bold 20px arial, sans-serif;
+    color: #968f84;
+    transition: box-shadow 0.02s cubic-bezier(0.79, 0.03, 0.43, 1);
+    box-shadow: inset 0px 0px 0px 0px #44413c, 0px 0px 0px 1.5px #44413c,
+      0px 16px 12px 0px #504d471f;
+  }
+  .button:active {
+    transition: box-shadow 0.1s cubic-bezier(0, 0, 0, 1);
+    box-shadow: inset 0px 0px 6px 0px #44413c, 0px 0px 0px 1.5px #44413c,
+      0px 10px 12px 0px #504d471f;
+  }
+  .button:active::before {
+    background: linear-gradient(0deg, #dddad3, #b6b0a2);
+    transition: transform 0.1s cubic-bezier(0, 0, 0, 1),
+      background 0.1s cubic-bezier(0, 0, 0, 1);
+  }
+  .button::before {
+    left: 10px;
+    top: 12px;
+    border-radius: 7px;
+    box-shadow: 0px -1px 0px 0px #dedcdc, 0px 2px 0px 0px #9a948c;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.01s cubic-bezier(0.79, 0.03, 0.43, 1),
+      background 0.02s cubic-bezier(0.79, 0.03, 0.43, 1);
+    background: linear-gradient(0deg, #e3e0d9, #c4bfb4);
+  }
+  .button::after {
+    left: 0;
+    top: 0;
+    z-index: -2;
+    position: absolute;
+    content: "";
+    filter: blur(1px);
+    border-top: 40px solid #e9e6e0;
+    border-bottom: 42px solid #999286;
+    border-left: 40px solid #cdc8be;
+    border-right: 40px solid #cdc8be;
+  }
+
+
+
+        /*
+            THE BASIC STYLES
+
+            Below are the styles that control most of the visuals for this page. They are the best place to start 
+            if you want to make the page your own. Try changing images, colours, fonts and text sizes to create your own look.
+            
+            You'll be amazed how different you can make this page look by only changing a few values.
+            
+            Some of the styles are explained here, some in other tutorials. Don't be afraid to change values, experimentation is one of
+            the best ways to learn!
+        */
+        /* 
+        body {
+            font-family:Georgia;
+            font-size:13px;
+            line-height:1.5;
+            color:#999999;
+            background:url('http://farm2.staticflickr.com/1379/1347700125_671c3e035f_b.jpg') top center;
+            background-size:cover;
+        }
+        */
+
+        h1.logo {
+            color:white;
+            padding:4%;
+            border-radius:50%;
+            font-size:50px;
+            font-style:italic;
+            
+            /* Shadow behind text */
+            text-shadow: 1px 1px 2px #6f828f;
+            filter: dropshadow(color=#6f828f, offx=1, offy=1);
+
+        }
+        
+        
+        h2.title {
+            font-weight:normal;
+            font-style:italic;
+            color:white;
+            line-height:26px;
+            font-size:34px;
+        }
+
+        /* Intro */        
+        .intro-block p {
+            font-size:18px;
+            font-style:italic;
+            color:#595959;
+            margin:40px 0;
+        }
+    
+        /* Photo */
+        .image {
+            -webkit-box-shadow:  0px 0px 2px 4px rgba(0, 0, 0, 0.1);
+                    box-shadow:  0px 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .image h2 {
+            font-size: 16px;
+        }
+        .image img {
+            min-height:230px;
+            max-height:230px;
+            border-left:10px solid white;
+            border-right:10px solid white;
+            border-top:10px solid white;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+        }
+        
+        .zoom-on-hover {
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+        }
+        .zoom-on-hover:hover {
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        
+        /* Rotate the images */
+        .rotate-right {
+            -moz-transform:rotate(2deg);
+            -webkit-transform: rotate(2deg);
+            -o-transform:rotate(2deg);
+            -ms-transform:rotate(2deg);
+            transform:rotate(2deg);
+       }
+       .rotate-left {
+            -moz-transform:rotate(-2deg);
+            -webkit-transform: rotate(-2deg);
+            -o-transform:rotate(-2deg);
+            -ms-transform:rotate(-2deg);
+            transform:rotate(-2deg);
+       }
+       
+        .caption {
+            color:#999999;
+            background: white;
+            font-style:italic;
+        }
+        .caption h2 {
+            font-size:20px;
+        }
+            
+        /* Footer */
+        .footer-wrap {
+            margin: 0 2%;
+            padding: 30px 0 50px 0;
+            border-top: 1px solid white;
+            color: white;
+            
+            /* Shadow behind text */
+            text-shadow: 1px 1px 1px #6f828f;
+            filter: dropshadow(color=#6f828f, offx=1, offy=1);
+        }
+        footer a {
+            color: white;
+        }
+        footer small {
+            font-size: 12px;
+        }
+        /*
+            ARE YOU FEELING AMBITIOUS?
+
+            The CSS below controls all the advanced aspects of the page and its design.
+            You're not expected to edit it but you are free to have a play. An ace
+            reference resource to help you understand it can me found here:
+
+            https://developer.mozilla.org/en-US/docs/Web/CSS
+        
+            Be aware though, you can break your page quite easily with this part of CSS.
+
+        */
+        body, html {
+            margin: 0;
+            padding: 0
+        }
+        a {
+            color: #000000;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        ul {
+            margin-left: 0;
+            padding-left: 1em;
+            line-height: 1.5em;
+        }
+        hr {
+            clear: both;
+        }
+    
+        /* Layout */
+        footer, .wrapper {
+            width: 80%;
+            max-width: 708px;
+            min-width: 550px;
+            margin: 0 auto;
+        }
+        section {
+            width: 100%;
+        }
+    
+        /* Header */
+        header {
+            padding: 30px 0;
+            text-align: left;
+        }
+        header h1.logo {
+            display: inline-block;
+            margin: 0;
+        }
+        header h2.title {
+            display: inline-block;
+            float: right;
+            padding: 4%;
+        }
+    
+        /* Footer */
+        footer {
+            text-align: center;
+        }
+        .footer-wrap {
+            margin: 0 2%;
+            padding: 30px 0 50px 0;
+        }
+    
+        /* Grids */
+        ul.grid {
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul.grid li {
+            position: relative;
+            margin: 3% 2%;
+        }
+        ul.grid li:last-child {
+            margin: 0 2%;
+        }
+        ul.grid li a {
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        ul.grid.half-width li {
+            width: 46%;
+            margin: 2%;
+            float: left;
+        }
+        ul.third-width li {
+            width:29.3%;
+            margin:0 2% 2%;
+            float:left;
+        }
+        
+        /* Photo */
+        .image {
+            z-index: 2;
+            position: relative;
+            overflow: hidden;
+        }
+        .image img {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .image h2 {
+            margin: 0;
+        }
+        
+        /* Caption */
+        .caption {
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+            display: block;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+        }
+        
+        /* Column */
+        .column {
+            width:96%;
+            margin:2%;
+            float:none;
+            clear:both;
+        }
+    
+        /* Group / Clear floating */
+        .group:after {
+            visibility: hidden;
+            display: block;
+            content: "";
+            clear: both;
+            height: 0;
+        }
